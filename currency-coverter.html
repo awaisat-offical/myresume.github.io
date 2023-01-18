@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Awais Riasat</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel= "manifest" href= "appstructure.json" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><a href="resume.html"><img src="logo.png" alt="no image"></a></div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="resume.html#sec2">Home</a></li>
+                <li><a href="resume.html#acehistory">Academic History</a></li>
+                <li><a href="resume.html#prohistory">Professional History</a></li>
+                <li><a href="currency-coverter.html">Currency Converter</a></li>
+                <li><a href="forecaster.html">Forecaster</a></li>
+                <li><a href="resume.html#skills">Skills</a></li>
+                <li><a href="resume.html#contact">Contact</a></li>
+            </div>
+        </ul>
+    </nav>
+
+
+    <div class="currency container" id="currency">
+        <div class="currency-container currcoventerr">
+            <div class="currency-container1">
+                <h1 class="currency-Heading">
+                    Currency Converter
+                </h1>
+            </div>
+            <div class="from">
+                <span class="scurr clabel">Source currency : </span>
+                <select id="fromamount" onchange="passvaluefun();">
+                    <option value="USD" selected>USD</option>
+                    <option value="AED">AED</option>
+                    <option value="ARS">ARS</option>
+                    <option value="AUD">AUD</option>
+                    <option value="BGN">BGN</option>
+                    <option value="BRL">BRL</option>
+                    <option value="BSD">BSD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CLP">CLP</option>
+                    <option value="CNY">CNY</option>
+                    <option value="COP">COP</option>
+                    <option value="CZK">CZK</option>
+                    <option value="DKK">DKK</option>
+                    <option value="DOP">DOP</option>
+                    <option value="EGP">EGP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="FJD">FJD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="GTQ">GTQ</option>
+                    <option value="HKD">HKD</option>
+                    <option value="HRK">HRK</option>
+                    <option value="HUF">HUF</option>
+                    <option value="IDR">IDR</option>
+                    <option value="ILS">ILS</option>
+                    <option value="INR">INR</option>
+                    <option value="ISK">ISK</option>
+                    <option value="JPY">JPY</option>
+                    <option value="KRW">KRW</option>
+                    <option value="KZT">KZT</option>
+                    <option value="MVR">MVR</option>
+                    <option value="MXN">MXN</option>
+                    <option value="MYR">MYR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                    <option value="PAB">PAB</option>
+                    <option value="PEN">PEN</option>
+                    <option value="PHP">PHP</option>
+                    <option value="PKR">PKR</option>
+                    <option value="PLN">PLN</option>
+                    <option value="PYG">PYG</option>
+                    <option value="RON">RON</option>
+                    <option value="RUB">RUB</option>
+                    <option value="SAR">SAR</option>
+                    <option value="SEK">SEK</option>
+                    <option value="SGD">SGD</option>
+                    <option value="THB">THB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="TWD">TWD</option>
+                    <option value="UAH">UAH</option>
+                    <option value="UYU">UYU</option>
+                    <option value="ZAR">ZAR</option>
+                </select>
+            </div>
+            <div class="to">
+                <span class="scurr clabel">Destination Currency : </span>
+                <select id="toamount" onchange="passvaluefunction()">
+                    <option value="USD">USD</option>
+                    <option value="AED">AED</option>
+                    <option value="ARS">ARS</option>
+                    <option value="AUD">AUD</option>
+                    <option value="BGN">BGN</option>
+                    <option value="BRL">BRL</option>
+                    <option value="BSD">BSD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CLP">CLP</option>
+                    <option value="CNY">CNY</option>
+                    <option value="COP">COP</option>
+                    <option value="CZK">CZK</option>
+                    <option value="DKK">DKK</option>
+                    <option value="DOP">DOP</option>
+                    <option value="EGP">EGP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="FJD">FJD</option>
+                    <option value="GBP" selected>GBP</option>
+                    <option value="GTQ">GTQ</option>
+                    <option value="HKD">HKD</option>
+                    <option value="HRK">HRK</option>
+                    <option value="HUF">HUF</option>
+                    <option value="IDR">IDR</option>
+                    <option value="ILS">ILS</option>
+                    <option value="INR">INR</option>
+                    <option value="ISK">ISK</option>
+                    <option value="JPY">JPY</option>
+                    <option value="KRW">KRW</option>
+                    <option value="KZT">KZT</option>
+                    <option value="MVR">MVR</option>
+                    <option value="MXN">MXN</option>
+                    <option value="MYR">MYR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                    <option value="PAB">PAB</option>
+                    <option value="PEN">PEN</option>
+                    <option value="PHP">PHP</option>
+                    <option value="PKR">PKR</option>
+                    <option value="PLN">PLN</option>
+                    <option value="PYG">PYG</option>
+                    <option value="RON">RON</option>
+                    <option value="RUB">RUB</option>
+                    <option value="SAR">SAR</option>
+                    <option value="SEK">SEK</option>
+                    <option value="SGD">SGD</option>
+                    <option value="THB">THB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="TWD">TWD</option>
+                    <option value="UAH">UAH</option>
+                    <option value="UYU">UYU</option>
+                    <option value="ZAR">ZAR</option>
+                </select>
+            </div>
+            <div class="currexchangerate">
+                <span class="clabel">Current Exchange Rate: <span id="currrate"></span> </span>
+            </div>
+            <div class="dateandtimecurr">
+                <span class="clabel">Calculation Timestamp: <span id="currdateandtime"></span> </span>
+            </div>
+            <div class="amountconverted">
+                <span class="clabel">Amount of transaction : </span>
+                <input type="number" name="amount" id="amount" min="0">
+            </div>
+            <div class="finalamount" style="margin: 25px 0px;">
+                <!-- Display the converted amount -->
+                <h2 class="clabel">Amount of transaction:
+                    <span class="finalValue" id="finalValue"></span>
+                </h2>
+            </div>
+            <button class="cbutton" id="convert" onclick="convertnow()" type="submit" style="margin: 25px 0px;">Convert Now</button>
+            <!-- reset button -->
+            <button class="cbutton" onclick="clearVal()">
+                Reset
+            </button>
+        </div>
+    </div>
+    <script>
+      let fromamount=document.getElementById('fromamount').value;
+      let toamount=document.getElementById('toamount').value;
+
+
+      // loadJSON method to open the JSON file.
+      function loadJSON(path, success, error) {
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              success(JSON.parse(xhr.responseText));
+            }
+            else {
+              error(xhr);
+            }
+          }
+        };
+        xhr.open('GET', path, true);
+        xhr.send();
+      }
+
+
+
+      function myData(myvalues)
+      {
+
+        fromamount = document.getElementById("fromamount").value;
+        toamount = document.getElementById("toamount").value;
+        document.getElementById('currrate').innerHTML =" 1 "+ document.getElementById("fromamount").value + " = " + myvalues[toamount.toLowerCase()]['rate'];
+        let totalamount=(document.getElementById('amount').value) * (myvalues[toamount.toLowerCase()]['rate']);
+        document.getElementById('finalValue').innerHTML = totalamount.toFixed(2);
+      }
+      function clearVal() {
+          window.location.reload();
+          document.getElementsByClassName("finalValue").innerHTML = "";
+      }
+      function convertnow(){
+        let date= new Date();
+        let dd=date.getDate();
+        let month=date.toLocaleString('default', { month: 'long' });
+        let year=date.getFullYear();
+        let hh=date.getHours();
+        let mm=date.getMinutes();
+        let format = dd + "<sup>th </sup>" + month + " " + year + " at "+ hh +":"+mm;
+        document.getElementById("currdateandtime").innerHTML = format;
+        let url="http://www.floatrates.com/daily/"+fromamount+".json";
+        fetch(url)
+            .then(res => res.json())
+            .then((out) => {
+                console.log('Output: ', out);
+        }).catch(err => console.error(err));
+        loadJSON(url, myData,'jsonp');
+
+      }
+      function passvaluefun() {
+        fromamount = document.getElementById("fromamount").value;
+      }
+      function passvaluefunction() {
+        toamount = document.getElementById("toamount").value;
+      }
+        if("serviceWorker" in navigator){
+            navigator.serviceWorker.register("serviceworker.js").then(registration=>{
+              console.log("Registered");
+            }).catch(error=>{
+              console.log("Not");
+            });
+        }
+
+    </script>
+    <div class="footer">
+        <div class="logo"><a href="resume.html"><img src="logo.png" alt="no image"></a></div>
+        <div class="footericons" style="float:right;">
+            <a href="#"><img src="phone.png" alt="no image"></a>
+            <a href="#"><img src="email.png" alt="no image"></a>
+            <a href="#"><img src="location.png" alt="no image"></a>
+
+        </div>
+    </div>
+</body>
+
+</html>

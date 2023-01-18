@@ -1,0 +1,21 @@
+{
+  "name": "Awais PWA", 
+  "short_name": "PWA",
+  "start_url": ".",
+  "theme_color": "#b58103",
+  "background_color": "#111111",
+  "display": "standalone",
+  "icons":[
+    {
+      "src":"logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src":"logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+
+}
